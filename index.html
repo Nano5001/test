@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Globetrotter</title>
+  <style>
+    /* Global styles */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: url('PH1.jpg') no-repeat;
+      background-size: cover;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header styles */
+    header {
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .navigation a {
+      position: relative;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1em;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 40px;
+    }
+
+    .navigation a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      border-radius: 5px;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .5s;
+    }
+
+    .navigation a:hover::after {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+    .navigation .btnLogin-popup {
+      width: 130px;
+      height: 50px;
+      background: transparent;
+      border: 2px solid #fff;
+      outline: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1em;
+      color: #fff;
+      font-weight: 500;
+      margin-left: 40px;
+      transition: .5s;
+    }
+
+    .navigation .btnLogin-popup:hover {
+      background: #fff;
+      color: #162938;
+    }
+
+    /* Hero section styles */
+    .hero {
+      background: url(hero.jpg) no-repeat center center;
+      background-size: cover;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1.5rem;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Destinations section styles */
+    .destinations {
+      padding: 50px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .destination {
+      margin: 20px;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .destination img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .destination:hover img {
+      transform: scale(1.2);
+    }
+
+    .destination .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .destination .overlay h3 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .destination .overlay p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #f5f5f5;
+      color: #333;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size:
+        1.2rem;
+    }
+
+    footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h2 class="Logo">Abdelhadi-And-Aziz<br>STORE</h2>
+    <nav class="navigation">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <button class="btnLogin-popup">Login</button>
+    </nav>
+  </header>
+  <!-- Hero section -->
+  <section class="hero">
+    <div>
+      <h1>Explore the world with Globetrotter</h1>
+      <button>Find your next adventure</button>
+    </div>
+  </section>
+
+  <!-- Destinations section -->
+  <section class="destinations">
+    <div class="destination">
+      <a href="https://www.traveltodo.com/"><img src="destination1.jpg" alt="Destination 1"></a>
+      <div class="overlay">
+        <h3>Paris, France</h3>
+        <p>From $1000</p>
+      </div>
+    </div>
+    <div class="destination">
+      <a href="https://www.traveltodo.com/"><img src="destination2.jpg" alt="Destination 2"></a>
+      <div class="overlay">
+        <h3>Tokyo, Japan</h3>
+        <p>From $1500</p>
+      </div>
+    </div>
+    <div class="destination">
+      <a href="https://www.traveltodo.com/"><img src="destination3.webp" alt="Destination 3"></a>
+      <div class="overlay">
+        <h3>Cape Town, South Africa</h3>
+        <p>From $2000</p>
+      </div>
+    </div>
+    <div class="destination">
+      <a href="https://www.traveltodo.com/"><img src="destination4.jpg" alt="Destination 4"></a>
+      <div class="overlay">
+        <h3>New York City, USA</h3>
+        <p>From $1200</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2023 Globetrotter. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+</body>
+
+</htmL>
